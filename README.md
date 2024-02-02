@@ -1,57 +1,24 @@
-# Project Name
+# Embedded Tomcat servlet example
 
-(short, 1-3 sentenced, description of the project)
+This sample includes a Tomcat application run by an embedded Tomcat server. It's configured to be deployable as an executable uber JAR file to Azure App Service.
 
-## Features
+## Running locally
 
-This project framework provides the following features:
+1. Build with `mvn clean package`.
+1. Run locally with `java -jar .\target\embeddedTomcatExample.jar`.
 
-* Feature 1
-* Feature 2
-* ...
+## Deploy to App Service
 
-## Getting Started
+To deploy to App Service, edit the section "Configure your deployment to Azure App Service" on the file pom.xml and run `mvn package azure-webapp:deploy`.
 
-### Prerequisites
+1. Add the plugin [azure-webapp-maven-plugin](https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Web-App) by running the following command:
 
-(ideally very short, if any)
+    ```bash
+    mvn com.microsoft.azure:azure-webapp-maven-plugin:2.13.0:config
+    ```
 
-- OS
-- Library version
-- ...
+1. Deploy the app by running the following command:
 
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+    ```bash
+    mvn package azure-webapp:deploy
+    ```

@@ -8,6 +8,8 @@
   <name>embeddedTomcatExample</name>
   <url>http://maven.apache.org</url>
   <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <tomcat.version>9.0.85</tomcat.version>
   </properties>
   <dependencies>

@@ -42,15 +42,14 @@
   <build>
     <finalName>embeddedTomcatExample</finalName>
     <!-- Copy application files as resources into the JAR -->
-		<resources>
-			<resource>
-				<directory>src/main/webapp</directory>
-				<!-- <targetPath>/WEB-INF/resources</targetPath> -->
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-			</resource>
-		</resources>
+    <resources>
+      <resource>
+        <directory>src/main/webapp</directory>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>

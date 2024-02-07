@@ -23,9 +23,11 @@ public class EmbeddedServletExample extends HttpServlet {
             throws ServletException, IOException {
         resp.setContentType("text/html");
         ServletOutputStream out = resp.getOutputStream();
-        out.println("<h1>Embedded Tomcat example: Servlet</h1>");
-        out.println("Current time:" + new java.util.Date());
+        out.println("<html><head><title>Embedded Tomcat example (Servlet)</title><link rel=\"stylesheet\" href=\"/css/reset.css\"></head>");
+        out.println("<body><h1>Embedded Tomcat example: Servlet</h1>");
+        out.println("<p>Current time:" + new java.util.Date() + "</p>");
         out.println("<hr><a href='/'>Home</a>");
+        out.println("</body></html>");
     }
 
 }
